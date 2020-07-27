@@ -313,26 +313,101 @@ GAME RULES:
 // console.log(ages);
 // console.log(fullJapan);
 
-var Question = function(question, answers, correct) {
-    this.question = question;
-    this.answers = answers;
-    this.correct = correct;
-};
+// ( function() {
+//     function Question(question, answers, correct) {
+//     this.question = question;
+//     this.answers = answers;
+//     this.correct = correct;
+// };
+// Question.prototype.printQuestion = function() {
+//     console.log(this.question);
+//     for (var i = 0; i < this.answers.length; i++){
+//         console.log(i + ': ' + this.answers[i]);
+//     }
+// }
 
-question1 = new Question('What\'s your city?', ['Boston', 'NewYork'], 1);
-question2 = new Question('What\'s is your favourite food?', ['Spageti', 'Pizza'], 0);
-question3 = new Question('How old are you?', [25, 36, 42], 2);
+// Question.prototype.checkAnswer = function(ans) {
+//     if (this.correct === ans){
+//         console.log(`Your answer is correct! ${ans} : ${this.answers[ans]}`);
+//     } else {
+//         console.log(`Your answer is wrong! ${ans} : ${this.answers[ans]}. Please try again`);
+//     }
+// }
+// q1 = new Question('What\'s your city?', ['Boston', 'NewYork'], 1);
+// q2 = new Question('What\'s is your favourite food?', ['Spageti', 'Pizza'], 0);
+// q3 = new Question('How old are you?', [25, 36, 42], 2);
 
-var questions = [question1, question2, question3];
+// var questions = [q1, q2, q3];
 
-var rand = Math.floor(Math.random() * Math.floor(3));
-console.log(questions[rand]);
+// var n = Math.floor(Math.random() * Math.floor(3));
+// questions[n].printQuestion();
 
-
-
-
-
-
+// var ans = parseInt(prompt(questions[n].question));
+// questions[n].checkAnswer(ans);
+// })();
 
 
+// ( function() {
+//     function Question(question, answers, correct) {
+//     this.question = question;
+//     this.answers = answers;
+//     this.correct = correct;
+// };
+// Question.prototype.printQuestion = function() {
+//     console.log(this.question);
+//     for (var i = 0; i < this.answers.length; i++){
+//         console.log(i + ': ' + this.answers[i]);
+//     }
+// }
+
+// Question.prototype.checkAnswer = function(ans, callback) {
+//     if (this.correct === ans){
+//         console.log(`Your answer is correct! ${ans} : ${this.answers[ans]}`);
+//         sc = callback(true);
+//     } else {
+//         console.log(`Your answer is wrong! ${ans} : ${this.answers[ans]}. Please try again`);
+//         sc = callback(false);
+//     }
+// }
+
+// Question.prototype.displayScore = function(score){
+//     console.log(`Your current score is : ${keepScore()}`);
+//     console.log('-------------------')
+// }
+// q1 = new Question('What\'s your city?', ['Boston', 'NewYork'], 1);
+// q2 = new Question('What\'s is your favourite food?', ['Spageti', 'Pizza'], 0);
+// q3 = new Question('How old are you?', [25, 36, 42], 2);
+
+// var questions = [q1, q2, q3];
+// function score() {
+//     var sc = 0;
+//     return function(correct) {
+//         correct ? sc++ : sc;
+//         return sc;        
+//     }
+// }
+// var keepScore = score();
+// function nextQuestion(){
+//     var n = Math.floor(Math.random() * Math.floor(questions.length));
+//     questions[n].printQuestion();
+    
+//     var ans = prompt(questions[n].question);
+//     if (ans !== 'exit'){
+//         questions[n].checkAnswer(parseInt(ans), keepScore);
+//         questions[n].displayScore();
+//         nextQuestion();
+//     }
+// }
+// nextQuestion();
+
+// })();
+
+
+// function retirement(retirementAge){
+//     var a = ' years left until retirment.';
+//     return function(yearOfBirth){
+//         var age = 2016 - yearOfBirth;
+//         console.log((retirementAge - age) + a);
+//     }
+// }
 
